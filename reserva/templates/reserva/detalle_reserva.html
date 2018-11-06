@@ -1,0 +1,16 @@
+{% extends 'reserva/base.html' %}
+
+{% block content %}
+<td><img src="{{reserva.foto.url}}" height="200" /></td>
+<h1>{{ reserva.nombre }}</h1>
+<p>{{ reserva.detalle}}</p>
+{% for c in reserva.pas.all %}
+                      <li>
+                        {{ c.nombresPasajero }}
+                      </li>
+{% endfor %}
+
+      <a class="btn btn-default" href="{% url 'editar_reserva' pk=reserva.pk %}"><span class="glyphicon glyphicon-pencil">Editar</span></a>
+      </div>
+      <a class="btn btn-default" href="{% url 'eliminar_reserva' pk=reserva.pk %}"><span class="glyphicon glyphicon-remove">Eliminar</span></a>
+  {% endblock %}
