@@ -122,3 +122,5 @@ MEDIA_ROOT= os.path.join(BASE_DIR,'media')
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/ProyectoVuelo/reserva/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'media'),)
+LOGIN_REDIRECT_URL = '/reserva/lista/'
+LOGOUT_REDIRECT_URL = '/accounts/login/'

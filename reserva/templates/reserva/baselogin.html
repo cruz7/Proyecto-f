@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 
   <head>
@@ -58,18 +58,13 @@
                 <li><a href="{% url 'pasajero_nuevo' %}">Nuevo pasajero</a></li>
               </ul>
             </li>
-            <li class="dropdown">
-              <a class=" nav-link js-scroll-trigger" data-toggle="dropdown" href="#">Configuracion
-              <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="{% url 'logout' %}">Cerrar sesion</a></li>
-              </ul>
-            </li>
           </ul>
         </div>
       </div>
     </nav>
+    {% block content %}
 
+    {% endblock %}
     <header class="masthead text-center text-white d-flex">
       <div class="container my-auto">
         <div class="row">
@@ -78,6 +73,7 @@
               <strong>Compañía Aerea WINTER STREAM</strong>
             </h1>
             <hr>
+
           </div>
           <div class="col-lg-8 mx-auto">
             <p class="text-faded mb-5">Inicie aquí su reservacion de vuelos, ofrecemos un servicio de alta calidad!</p>
@@ -86,6 +82,7 @@
         </div>
       </div>
     </header>
+
 
     <section class="bg-primary" id="about">
       <div class="container">
@@ -100,9 +97,6 @@
       </div>
     </section>
 
-    {% block content %}
-
-    {% endblock %}
 
     <section id="contact">
       <div class="container">

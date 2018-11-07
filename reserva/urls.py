@@ -4,7 +4,8 @@ from . import views
 # se puede crear un hipervinculo para llamarla, en este ejemplo hay que invocar manualmente la dirección.
 
 urlpatterns = [
-    url(r'^$', views.lista_reserva, name ='lista_reserva'),
+    url(r'^$', views.inicio, name ='inicio'),
+    url(r'^reserva/lista/$', views.lista_reserva, name ='lista_reserva'),
     url(r'^reserva/nueva/$', views.reserva_nueva, name='reserva_nueva'),
     url(r'^reservareserva/(?P<pk>[0-9]+)/detalle/$', views.detalle_reserva, name='detalle_reserva'),
     url(r'^reservareserva/(?P<pk>[0-9]+)/editar/$', views.editar_reserva, name='editar_reserva'),
