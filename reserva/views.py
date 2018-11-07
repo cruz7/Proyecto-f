@@ -17,6 +17,7 @@ def reserva_nueva(request):
     else:
         formulario = PasajeroVueloForm()
     return render(request, 'reserva/reserva_editar.html', {'formulario': formulario})
+
 @login_required
 def vuelo_nuevo(request):
     if request.method == 'POST':
@@ -65,3 +66,11 @@ def editar_reserva(request, pk):
     else:
         formulario = PasajeroVueloForm(instance=reserva)
     return render(request, 'reserva/reserva_editar.html', {'formulario': formulario})
+
+def lista_pasajero(request):
+    pasajero = Pasajero.objects.all()
+    return render(request, 'reserva/listar_pasajero.html', {'pasajero': pasajero})
+
+def lista_vuelo(request):
+    vuelo = Vuelo.objects.all()
+    return render(request, 'reserva/listar_vuelo.html', {'vuelo': vuelo})

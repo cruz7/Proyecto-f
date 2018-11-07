@@ -12,4 +12,7 @@ urlpatterns = [
     url(r'^reserva/(?P<pk>\d+)/eliminar/$', views.eliminar_reserva, name='eliminar_reserva'),
     url(r'^vuelo/nuevo/$', views.vuelo_nuevo, name='vuelo_nuevo'),
     url(r'^pasajero/nuevo/$', views.pasajero_nuevo, name='pasajero_nuevo'),
+
+    url(r'^vuelo/lista/$', views.lista_vuelo, name ='lista_vuelo'),
+    url(r'^pasajero/lista/$', views.lista_pasajero, name ='lista_pasajero'),
     ]
